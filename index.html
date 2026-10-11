@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#0d0b14" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Ring Sort" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./icon-180.png" />
+    <link rel="icon" href="./icon-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" />
+    <title>Ring Sort</title>
+    <script type="module" crossorigin src="./assets/index-Dc7O1EJu.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C5614NCK.css">
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="bg"></canvas>
+      <canvas id="c"></canvas>
+
+      <header id="top">
+        <div id="level">Level 1</div>
+        <div id="moves">0 tahů</div>
+        <button id="btn-zoom" class="icon-btn small" aria-label="Oddálit">
+          <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" /><path d="M15.5 15.5 20 20M7.5 10.5h6" /></svg>
+        </button>
+        <button id="btn-sound" class="icon-btn small" aria-label="Zvuk">
+          <svg viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z" /><path class="wave" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" /></svg>
+        </button>
+      </header>
+
+      <nav id="bar">
+        <button id="btn-undo" class="icon-btn" aria-label="Zpět">
+          <svg viewBox="0 0 24 24"><path d="M9 14 4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" /></svg>
+          <span>Zpět</span>
+        </button>
+        <button id="btn-restart" class="icon-btn" aria-label="Znovu">
+          <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7" /><path d="M3 4v5h5" /></svg>
+          <span>Znovu</span>
+        </button>
+        <button id="btn-hint" class="icon-btn" aria-label="Nápověda">
+          <svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4" /><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.8V16h5v-.3c0-.7.4-1.4 1-1.8A6 6 0 0 0 12 3z" /></svg>
+          <span>Rada</span>
+        </button>
+        <button id="btn-add" class="icon-btn" aria-label="Přidat tyčku">
+          <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+          <span>Tyčka</span>
+        </button>
+      </nav>
+
+      <div id="toast" role="status"></div>
+
+      <div id="win" hidden>
+        <div class="card">
+          <div class="title">Hotovo!</div>
+          <div id="win-text"></div>
+          <button id="btn-next">Další level</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
